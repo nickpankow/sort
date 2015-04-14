@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestSelectionSort(t *testing.T) {
+func TestMergeSort(t *testing.T) {
 	testCases := []struct{
 		data 		[]SortableObject
 		ascending 	bool
@@ -19,7 +19,7 @@ func TestSelectionSort(t *testing.T) {
 
 	for _, x := range testCases { 
 		t.Log("Presort: ", x.data)
-		SelectionSort(x.data, x.ascending)
+		MergeSort(x.data, x.ascending)
 		if isArraySorted(x.data, x.ascending) == false {
 			t.Error("Array did not sort properly. ", x.data)
 		} else {

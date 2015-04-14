@@ -9,6 +9,10 @@ type sortTestObj struct {
 	data interface{}
 }
 
+func (s sortTestObj) GetValue() int {
+	return s.i
+}
+
 func isArraySorted(a []SortableObject, ascending bool) bool {
 	for i := 0; i < len(a) - 1; i++ {
 		if ascending == true {
