@@ -1,9 +1,5 @@
 package sort
 
-type SortableObject interface {
-	GetValue() int
-}
-
 func InsertSort(a []SortableObject, ascending bool) {
 	if ascending {
 		insertSortAscending(a)

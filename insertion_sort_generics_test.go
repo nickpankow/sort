@@ -4,15 +4,6 @@ import (
 	"testing"
 )
 
-type sortTestObj struct {
-	i int
-	data interface{}
-}
-
-func (s sortTestObj) GetValue() int {
-	return s.i
-}
-
 func TestInsertSort(t *testing.T) {
 	testCases := []struct{
 		data 		[]SortableObject
@@ -58,19 +49,4 @@ func TestIsArraySorted(t *testing.T){
 			t.Error("Array does not match expected: ", x)
 		}
 	}
-}
-
-func isArraySorted(a []SortableObject, ascending bool) bool {
-	for i := 0; i < len(a) - 1; i++ {
-		if ascending == true {
-			if a[i].GetValue() > a[i + 1].GetValue() {
-				return false
-			}
-		} else {
-			if a[i].GetValue() < a[i + 1].GetValue() {
-				return false
-			}
-		}
-	}
-	return true
 }
