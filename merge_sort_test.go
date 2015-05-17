@@ -83,7 +83,7 @@ func TestMergeSortAscending(t *testing.T) {
 	}
 }
 
-func TestMergeSortDecsending(t *testing.T) {
+func TestMergeSortDescending(t *testing.T) {
 	const num_tests = 10
 	const array_size = 8
 	const max_value = 100
