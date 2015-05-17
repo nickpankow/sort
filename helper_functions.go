@@ -5,6 +5,7 @@ import (
 	"strconv"
 )
 
+// Check if an array is sorted in ascending or descending order.
 func isArraySorted(a []SortableObject, ascending bool) bool {
 	for i := 0; i < len(a) - 1; i++ {
 		if ascending == true {
@@ -20,6 +21,7 @@ func isArraySorted(a []SortableObject, ascending bool) bool {
 	return true
 }
 
+// Generate a string of the values contained in an array of SortableObjects
 func getSortedObjectArrayString(s []SortableObject) string {
 	var buf bytes.Buffer
 	if (len(s) == 0) { return "" }
@@ -36,6 +38,7 @@ func getSortedObjectArrayString(s []SortableObject) string {
 	return buf.String()
 }
 
+// Generate a string of the values contained in a section of an array of SortableObjects
 func getSortedObjectArraySegmentString(s []SortableObject, start int, end int) string {
 	var buf bytes.Buffer
 	var x SortableObject

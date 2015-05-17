@@ -1,14 +1,17 @@
 package sort
 
+// Sortable Type
 type SortableObject interface {
-	GetValue() int
+	GetValue() int  // Method by which sorting algorithms compare objects
 }
 
+// Implementation of SortableObject used in testing
 type sortTestObj struct {
 	i int
 	data interface{}
 }
 
+// Implement SortableObject Interface for sortTestObj
 func (s sortTestObj) GetValue() int {
 	return s.i
 }

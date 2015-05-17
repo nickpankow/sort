@@ -1,7 +1,6 @@
 package sort
 
-// import "fmt"
-
+// Sort an array using a Selection Sort algorithm.
 func SelectionSort(a []SortableObject, ascending bool) {
 	if ascending {
 		selectionSortAscending(a)
@@ -10,8 +9,8 @@ func SelectionSort(a []SortableObject, ascending bool) {
 	}
 }
 
+// Sort an array in ascending order using a Selection Sort algorithm.
 func selectionSortAscending(a []SortableObject) {
-	// fmt.Println("===")
 	for i := 0; i < len(a); i++ {
 		lowest := i
 		for j := i; j < len(a); j++ {
@@ -23,11 +22,10 @@ func selectionSortAscending(a []SortableObject) {
 		x := a[i]
 		a[i] = a[lowest]
 		a[lowest] = x
-		// fmt.Println(a)
 	}
-	// fmt.Println("===")
 }
 
+// Sort an array in descending order using a Selection Sort algorithm.
 func selectionSortDescending(a []SortableObject) {
 	for i := 0; i < len(a); i++ {
 		lowest := i

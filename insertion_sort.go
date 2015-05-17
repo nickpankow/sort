@@ -1,5 +1,6 @@
 package sort
 
+// Sort an array of integers using an Insertion sort algorithm.
 func InsertSortInt(a []int, ascending bool) {
 	if ascending {
 		insertSortAscendingInt(a)
@@ -8,6 +9,7 @@ func InsertSortInt(a []int, ascending bool) {
 	}
 }
 
+// Sort an array of integers in ascending order using an Insertion sort algorithm.
 func insertSortAscendingInt(a []int) {
 	for i := 0; i < len(a); i++ {
 		// Move search left while it is greater than the item to its left
@@ -22,6 +24,7 @@ func insertSortAscendingInt(a []int) {
 	}
 }
 
+// Sort an array of integers in descending order using an Insertion sort algorithm.
 func insertSortDescendingInt(a []int) {
 	for i := 0; i < len(a); i++ {
 		// Move search left while it is greater than the item to its left
@@ -36,6 +39,7 @@ func insertSortDescendingInt(a []int) {
 	}
 }
 
+// Sort an array using an Insertion sort algorithm.
 func InsertSort(a []SortableObject, ascending bool) {
 	if ascending {
 		insertSortAscending(a)
@@ -44,6 +48,7 @@ func InsertSort(a []SortableObject, ascending bool) {
 	}
 }
 
+// Sort an array in ascending order using an Insertion sort algorithm.
 func insertSortAscending(a []SortableObject) {
 	for i := 0; i < len(a); i++ {
 		// Move search left while it is greater than the item to its left
@@ -58,6 +63,7 @@ func insertSortAscending(a []SortableObject) {
 	}
 }
 
+// Sort an array in descending order using an Insertion sort algorithm.
 func insertSortDescending(a []SortableObject) {
 	for i := 0; i < len(a); i++ {
 		// Move search left while it is greater than the item to its left
